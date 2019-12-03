@@ -2,10 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './app.js';
+import CounterContext from './components/settings/site-context.js'
 
 class Main extends React.Component {
   render() {
-    return <App />;
+    return (
+      <CounterContext>
+        <App />
+      </CounterContext>
+    )
   }
 }
 
